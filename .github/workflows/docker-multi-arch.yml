@@ -49,7 +49,8 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
-          context: .
+          context: ./src
+          file: ./src/Dockerfile
           platforms: linux/amd64, linux/arm64 # Specifies the target architectures
           push: true
           tags: ${{ steps.meta.outputs.tags }}
