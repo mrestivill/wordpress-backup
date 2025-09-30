@@ -1,6 +1,7 @@
 FROM ubuntu
 
 MAINTAINER Angelo Veltens <angelo.veltens@online.de>
+ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && \
     apt-get install mysql-client cron bzip2 -y && \
